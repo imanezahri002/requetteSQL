@@ -81,3 +81,4 @@ FROM users s INNER JOIN subscription sub
 ON s.subscriptionId=sub.subscriptionId 
 GROUP BY subscriptionType;
 -- requete neuf:Trouver les films ayant une note moyenne supérieure à 4.
+SELECT AVG(r.rating) AS moy,title FROM movie m INNER JOIN review r ON m.movieId=r.movieId GROUP BY title having moy<4;
