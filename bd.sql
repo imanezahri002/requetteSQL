@@ -72,4 +72,7 @@ SELECT firstName,lastName FROM users s INNER JOIN watchhistory w ON s.userId=w.u
 SELECT title FROM movie 
 ORDER BY duration DESC 
 LIMIT 5
+--requete seven:Calculer le pourcentage moyen de complétion pour chaque film.
+SELECT title,avg(completionPercentage) FROM watchhistory w INNER JOIN movie m ON w.movieId=m.movieId
+GROUP BY title;
 
