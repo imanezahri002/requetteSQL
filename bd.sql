@@ -66,4 +66,7 @@ ADD CONSTRAINT userid FOREIGN KEY (userId) REFERENCES users(userId)
 -- modification du type du colonne subscriptionType
 ALTER TABLE subscription
 MODIFY COLUMN subscriptionType ENUM('basics','premium') NOT NULL;
+--ajout du champ monthlyFee dans la table subscription
+ALTER TABLE subscription
+ADD COLUMN monthlyFee DECIMAL(10,2) NOT NULL 
 
