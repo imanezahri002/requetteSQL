@@ -57,3 +57,6 @@ CREATE TABLE review(
     reviewText TEXT NULL,
     reviewDate DATE
 );
+--requete un
+INSERT INTO movie (title, genre, releaseYear, duration,rating)
+VALUES ('stars', 'drama', 2020,99,'R');
