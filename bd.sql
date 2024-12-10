@@ -80,3 +80,4 @@ SELECT count(*) AS Total,subscriptionType
 FROM users s INNER JOIN subscription sub 
 ON s.subscriptionId=sub.subscriptionId 
 GROUP BY subscriptionType;
+-- requete neuf:Trouver les films ayant une note moyenne supérieure à 4.
