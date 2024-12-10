@@ -31,5 +31,13 @@ reviewText TEXT NOT NULL,
 reviewDate DATE NOT NULL
 );
 --creation de la table  movie
+CREATE TABLE movie( 
+movieId INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+title VARCHAR(255) NOT NULL,
+genre VARCHAR(100),
+releaseYear INT NOT NULL,
+duration INT NOT NULL,
+rating VARCHAR(10)NOT NULL 
+);
 
 
