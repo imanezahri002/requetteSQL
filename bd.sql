@@ -66,3 +66,6 @@ SELECT * FROM movie WHERE genre="Comedy" AND releaseYear>2020
 UPDATE `users` SET `subscriptionId`=2;
 --requete quatre Afficher les abonnements : Joindre les utilisateurs à leurs types d'abonnements.
 SELECT firstName,lastName,subscriptionType FROM users s INNER JOIN subscription sub ON s.subscriptionId=sub.subscriptionId;
+--requete cinq: Filtrer les visionnages : Trouver tous les utilisateurs ayant terminé de regarder un film.
+SELECT firstName,lastName FROM users s INNER JOIN watchhistory w ON s.userId=w.userId WHERE completionPercentage=100;
+
