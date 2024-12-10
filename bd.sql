@@ -64,3 +64,5 @@ VALUES ('Data Science Adventures', 'Documentary', 2021,100,'L');
 SELECT * FROM movie WHERE genre="Comedy" AND releaseYear>2020
 -- requete trois Mise à jour des abonnements : Passer tous les utilisateurs de "Basic" à "Premium"
 UPDATE `users` SET `subscriptionId`=2;
+--requete quatre Afficher les abonnements : Joindre les utilisateurs à leurs types d'abonnements.
+SELECT firstName,lastName,subscriptionType FROM users s INNER JOIN subscription sub ON s.subscriptionId=sub.subscriptionId;
