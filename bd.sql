@@ -39,5 +39,28 @@ releaseYear INT NOT NULL,
 duration INT NOT NULL,
 rating VARCHAR(10)NOT NULL 
 );
+--ajout du cle etrangere userId a la table movie
+ALTER TABLE review
+ADD CONSTRAINT idUSER FOREIGN KEY (userId) REFERENCES users(userId)
+--ajout du cle etrangere movieId a la table movie
+ALTER TABLE review
+ADD CONSTRAINT idMovie FOREIGN KEY (movieId) REFERENCES movie(movieId)
+-- modification sur type data du champ reviewText
+ALTER TABLE review 
+MODIFY COLUMN reviewText TEXT NULL;
+--creation de la table watchhistory
+CREATE TABLE watchhistory(
+watchhistoryId INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+userId INT NOT NULL,
+movieId INT NOT NULL,
+watchDate DATE NOT NULL,
+completionPercentage INT DEFAULT 0
+)
+--ajout de la contrainte de la cle etrangere 
+ALTER TABLE watchhistory
+ADD CONSTRAINT movieid FOREIGN KEY (movieId) REFERENCES movie(movieId)
 
+--ajout de la contrainte de la cle etrangere 
+ALTER TABLE watchhistory
+ADD CONSTRAINT userid FOREIGN KEY (userId) REFERENCES users(userId)
 
