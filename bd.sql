@@ -63,4 +63,7 @@ ADD CONSTRAINT movieid FOREIGN KEY (movieId) REFERENCES movie(movieId)
 --ajout de la contrainte de la cle etrangere 
 ALTER TABLE watchhistory
 ADD CONSTRAINT userid FOREIGN KEY (userId) REFERENCES users(userId)
+-- modification du type du colonne subscriptionType
+ALTER TABLE subscription
+MODIFY COLUMN subscriptionType ENUM('basics','premium') NOT NULL;
 
