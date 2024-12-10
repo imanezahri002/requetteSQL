@@ -60,4 +60,5 @@ CREATE TABLE review(
 --requete un
 INSERT INTO movie (title, genre, releaseYear, duration,rating)
 VALUES ('Data Science Adventures', 'Documentary', 2021,100,'L');
---requete deux
+--requete deux Rechercher des films : Lister tous les films du genre "Comedy" sortis après 2020
+SELECT * FROM movie WHERE genre="Comedy" AND releaseYear>2020
