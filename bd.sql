@@ -22,5 +22,14 @@ CREATE TABLE subscription (
 ALTER TABLE users 
 ADD CONSTRAINT idSub FOREIGN KEY (subscriptionId) REFERENCES subscription(subscriptionId)
 --creation de la table review
+CREATE TABLE review(
+reviewId INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+userId INT NOT NULL,
+movieId INT NOT NULL,
+rating INT NOT NULL,
+reviewText TEXT NOT NULL,
+reviewDate DATE NOT NULL
+);
+--creation de la table  movie
 
 
