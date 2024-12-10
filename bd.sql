@@ -75,4 +75,8 @@ LIMIT 5
 --requete seven:Calculer le pourcentage moyen de complétion pour chaque film.
 SELECT title,avg(completionPercentage) FROM watchhistory w INNER JOIN movie m ON w.movieId=m.movieId
 GROUP BY title;
-
+--requete huit:Grouper les utilisateurs par type d’abonnement et compter le nombre total d’utilisateurs par groupe.
+SELECT count(*) AS Total,subscriptionType 
+FROM users s INNER JOIN subscription sub 
+ON s.subscriptionId=sub.subscriptionId 
+GROUP BY subscriptionType;
