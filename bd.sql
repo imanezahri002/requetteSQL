@@ -59,4 +59,5 @@ CREATE TABLE review(
 );
 --requete un
 INSERT INTO movie (title, genre, releaseYear, duration,rating)
-VALUES ('stars', 'drama', 2020,99,'R');
+VALUES ('Data Science Adventures', 'Documentary', 2021,100,'L');
+--requete deux
